@@ -30,15 +30,15 @@ $name = $email = $gender = $otherGender = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
     if (isset($_GET["name"])) {
-        $name = htmlspecialchars($_GET["name"]);
+        $name = ($_GET["name"]);
     }
     if (isset($_GET["email"])) {
-        $email = htmlspecialchars($_GET["email"]);
+        $email = ($_GET["email"]);
     }
     if (isset($_GET["gender"])) {
-        $gender = htmlspecialchars($_GET["gender"]);
-        if ($gender === "other" && isset($_GET["otherGender"])) {
-            $otherGender = htmlspecialchars($_GET["otherGender"]);
+        $gender = ($_GET["gender"]);
+        if ($gender === "other" && ($_GET["otherGender"])) {
+            $otherGender = ($_GET["otherGender"]);
         }
     }
 
